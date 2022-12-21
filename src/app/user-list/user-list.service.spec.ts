@@ -1,14 +1,14 @@
 import { UserListService } from './user-list.service';
 
 describe('User List Service', () => {
-  let service: UserListService;
-  beforeEach(() => {
-    service = new UserListService();
-  });
-  it('should return a User list with 16 users', (done: DoneFn) => {
-    service.getAll().then((response) => {
-      expect(response.length).toBe(16);
-      done();
+    let service: UserListService;
+    beforeEach(() => {
+        service = new UserListService();
     });
-  });
+    it('should return a User list with 16 users', (done: DoneFn) => {
+        service.getAll().then((response) => {
+            expect(response.length).toBe(16);
+            done();
+        });
+    });
 });
