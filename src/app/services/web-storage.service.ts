@@ -18,4 +18,7 @@ export class WebStorageService {
   public getRemote(): Observable<string> {
     return this.http.get<string>('/mock/api/filter');
   }
+  public setRemote(payload: string): Observable<string> {
+    return this.http.put<string>('/mock/api/filter', payload);
+  }
 }
