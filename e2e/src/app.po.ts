@@ -1,4 +1,10 @@
-import { browser, element, by, ElementArrayFinder } from 'protractor';
+import {
+  browser,
+  element,
+  by,
+  ElementArrayFinder,
+  ElementFinder,
+} from 'protractor';
 
 export class AppPage {
   public async getDashboard(): Promise<any> {
@@ -12,5 +18,10 @@ export class AppPage {
   public getListItems(): ElementArrayFinder {
     const items = by.css('li');
     return element.all(items);
+  }
+
+  public getInpit(): ElementFinder {
+    const input = by.css('input');
+    return element(input);
   }
 }
