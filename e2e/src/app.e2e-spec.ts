@@ -1,19 +1,18 @@
-import { browser, element, by } from 'protractor';
+import { AppPage } from './app.po';
 
 describe('User list app', () => {
+  const page = new AppPage();
   beforeEach(async () => {
-    await browser.get('/');
+    await page.getDashboard;
 
     it('should have a header', async () => {
-      const header = by.css('h2');
-      const text = await element(header).getText();
+      const text = await page.getHeaderText();
       expect(text).toBe('Active Users');
     });
   });
 
   it('should have 16 users on page load', async () => {
-    const items = by.css('li');
-    const users = element.all(items);
+    const users = page.getListItems();
     expect(await users.count()).toBe(16);
   });
 });
