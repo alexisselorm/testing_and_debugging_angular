@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { ErrorMetadataService } from './services/error-metadata.service';
 import { HighlightTextPipe } from './pipes/highlight-text.pipe';
+import { LocationIdPipe } from './pipes/location-id.pipe';
 
 @NgModule({
-  declarations: [AppComponent, UserListComponent, HighlightTextPipe],
+  declarations: [AppComponent, UserListComponent, HighlightTextPipe, LocationIdPipe],
   imports: [BrowserModule, AppRoutingModule],
   providers: [{ provide: ErrorHandler, useClass: ErrorMetadataService }],
   bootstrap: [AppComponent],

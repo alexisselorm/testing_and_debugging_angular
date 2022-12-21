@@ -20,7 +20,7 @@
 
 <ul class="user-list">
   <li
-    *ngFor="let user of users"
+    *ngFor="let user of users | locationId : 3 : 4 : 5"
     class="user-list-item"
     [innerHtml]="user.name | highlightText : filter.value"
   ></li>
